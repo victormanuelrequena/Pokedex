@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import { ApiProvider } from './context/apiContext';
 import './App.css';
+
+import TopBar from './components/topBar/TopBar';
+import Pokemon from './components/pokemon/Pokemon';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApiProvider>
+      <div className="App">
+        <TopBar />
+        <Pokemon />
+      </div>
+    </ApiProvider>
   );
 }
 
