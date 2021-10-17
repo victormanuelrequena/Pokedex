@@ -6,7 +6,6 @@ const Canvas = () => {
 
   const { state, setColors } = useContext(apiData);
   const { pokeData: pokemon } = state;
-
   const canvasRef = useRef(null);
   
   useEffect(() => {

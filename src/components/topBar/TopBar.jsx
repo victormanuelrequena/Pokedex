@@ -22,12 +22,15 @@ const TopBar = () => {
     <TopBarStyled colors={colors}>
       <Title>Pokedex App</Title>
       <FormSearchPk onSubmit={handleSubmit}>
+      <LabelSearch>
+        Search Pokemon by id
       <InputSearchPk
       type="text" 
       placeholder="Buscar Pokemon por nombre o id"
       value={pokeSearch}
       onChange={handleChange}
       />
+      </LabelSearch>
       </FormSearchPk>
     </TopBarStyled>
   )
@@ -51,6 +54,11 @@ const Title = styled.h1`
 
 const FormSearchPk = styled.form`
 
+`;
+
+const LabelSearch = styled.label`
+  display: flex;
+  flex-direction: column;
 `;
 
 const InputSearchPk = styled.input`
